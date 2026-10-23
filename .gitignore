@@ -8,6 +8,9 @@
 # Production
 /build
 
+/.github
+/docs
+
 # Misc
 .DS_Store
 *.pem

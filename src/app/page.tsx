@@ -33,7 +33,7 @@ export default function HomePage() {
   const [modalOpened, setModalOpened] = useState(false);
 
   return (
-    <main className="mx-auto max-w-2xl space-y-6 p-6">
+    <main className="mx-auto max-w-7xl space-y-6 p-6">
       <header className="space-y-2">
         <h1 className="text-2xl font-bold text-ink">Fondasi frontend — scaffold sementara</h1>
         <p className="text-sm text-ink-soft">
