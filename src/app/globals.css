@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — satu-satunya sumber keputusan visual dasar.
+ * Nilai di bawah adalah DEFAULT NETRAL (bukan identitas produk): ganti di sini
+ * (bukan di komponen) saat arah visual ditetapkan. Tailwind 4 memetakan token
+ * ini ke utility, mis. --color-surface -> bg-surface, text-ink, border-border.
+ *
+ * Token = keputusan reusable. Keputusan layout/produk (sidebar vs topbar,
+ * KPI, tabel laporan) TIDAK ditentukan di sini.
+ *
+ * `static` membuat semua token selalu dikeluarkan ke CSS meski belum dipakai
+ * utility — penting karena token juga dipakai langsung via var(--token).
+ */
+@theme static {
+  /* Permukaan */
+  --color-canvas: #f8fafc; /* latar halaman */
+  --color-surface: #ffffff; /* kartu/panel di atas canvas */
+  --color-border: #e2e8f0; /* garis pemisah halus */
+
+  /* Teks */
+  --color-ink: #1e293b; /* teks utama */
+  --color-ink-soft: #64748b; /* teks sekunder/caption */
+
+  /* Primer — diselaraskan dengan palet biru bawaan Mantine (blue-6/7/0)
+     agar tombol Mantine dan utility Tailwind tampil konsisten. */
+  --color-primary: #1c7ed6;
+  --color-primary-strong: #1971c2; /* hover/active */
+  --color-primary-soft: #e7f5ff; /* background lembut */
+  --color-on-primary: #ffffff; /* teks di atas primer */
+
+  /* Status */
+  --color-success: #2f9e44;
+  --color-success-soft: #ebfbee;
+  --color-warning: #f08c00;
+  --color-warning-soft: #fff4e6;
+  --color-danger: #e03131;
+  --color-danger-soft: #fff5f5;
+
+  /* Radius (menggantikan skala bawaan Tailwind) */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(30, 41, 59, 0.06);
+  --shadow-md: 0 4px 12px rgba(30, 41, 59, 0.08);
+}
+
+/* Tipografi & spacing memakai skala bawaan Tailwind (rem, 0.25rem per
+   langkah). Ubah di @theme di atas hanya bila skala default tidak cocok. */
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--color-canvas);
+}
+
+body {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}

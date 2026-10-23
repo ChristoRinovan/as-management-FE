@@ -1,0 +1,29 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env — nilai rahasia tidak pernah masuk repo (lihat README §Env & Secret)
+# .env*
+# (sengaja dikomentari: .env.example boleh di-commit bila dibuat)
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+/coverage
